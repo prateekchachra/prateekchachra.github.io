@@ -1,3 +1,7 @@
+import { HiHome, HiUser, HiRectangleGroup, HiViewColumns, HiChatBubbleBottomCenterText, HiEnvelope } from 'react-icons/hi';
+import Link from 'next/link';
+
+
 //  links
 const links = [
   { name: 'home', path: '/', icon: <HiHome /> },
@@ -15,6 +19,7 @@ const links = [
     icon: <HiEnvelope />,
   },
 ];
+
 
 const Nav = () => {
   return <nav>nav</nav>;

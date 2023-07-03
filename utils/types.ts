@@ -1,7 +1,5 @@
-
-
 export type Service = {
-    icon: React.ReactNode;
-    title: string;
-    description: string;
-}
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+};

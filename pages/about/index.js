@@ -13,21 +13,67 @@ const aboutData = [
       {
         title: 'Full Stack Development',
         icons: [
-          <FaReact />,
-          <SiNextdotjs />,
-          <FaJs />,
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaNodeJs />,
-          <SiMysql />,
-          <SiFramer />,
-          <SiExpress />,
-          <SiRedis />,
+          {
+            name: 'React',
+            iconLink: <FaReact />
+          },
+          {
+            name: 'Next.JS',
+            iconLink: <SiNextdotjs />
+          },
+          {
+            name: 'Javascript',
+            iconLink: <FaJs />
+          },
+          {
+            name: 'HTML 5',
+            iconLink: <FaHtml5 />
+          },
+          {
+            name: 'CSS 3',
+            iconLink: <FaCss3 />
+          },
+          {
+            name: 'Node JS',
+            iconLink: <FaNodeJs />
+          },
+          {
+            name: 'MySQL',
+            iconLink: <SiMysql />
+          },
+          {
+            name: 'Express JS',
+            iconLink: <SiExpress />
+          },
+          {
+            name: 'Redis',
+            iconLink: <SiRedis />
+          },
         ],
       },
       {
         title: 'Mobile App Development',
-        icons: [<FaSwift />, <SiKotlin />, <FaReacteurope />, <SiFirebase />, <SiMocha />
+        icons: [
+          {
+            name: 'React Native',
+            iconLink: <FaReacteurope />
+          },
+          {
+            name: 'Kotlin',
+            iconLink: <SiKotlin />
+          },
+          {
+            name: 'Swift',
+            iconLink: <FaSwift />
+          },
+          {
+            name: 'Firebase',
+            iconLink: <SiFirebase />
+          },
+          {
+            name: 'Mocha',
+            iconLink: <SiMocha />
+          },
       ],
       },
     ],
@@ -36,29 +82,34 @@ const aboutData = [
     title: 'awards',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
+        title: 'EY Machine Learning Hackathon Finalist - Gurgaon',
+        stage: 'Feb 2018',
       },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
-      },
+
     ],
   },
   {
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Full Stack Developer - Taxfix (Madrid)',
+        stage: 'Mar 2022 - Present',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
+        title: 'Senior React Native Engineer - Guru.com (Pittsburgh)',
+        stage: 'Jun 2021 - Mar 2022',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Mobile Application Developer - Ayu Health (Bangalore)',
+        stage: 'Jun 2020 - Jan 2021',
+      },
+      {
+        title: 'Full-stack Developer - MyScoot (Delhi)',
+        stage: 'Jul 2019 - Jan 2020',
+      },
+      {
+        title: 'Senior Software Engineer - Nucleus Software (Delhi)',
+        stage: 'Jul 2016 - Jun 2018',
       },
     ],
   },
@@ -67,7 +118,7 @@ const aboutData = [
     info: [
       {
         title: 'B.Tech. in Electronics Engineering - DTU',
-        stage: '2016',
+        stage: 'Aug 2012 - May 2016',
       },
     ],
   },
@@ -77,10 +128,15 @@ const aboutData = [
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import Head from 'next/head';
 
 const About = () => {
   const [index, setIndex] = useState(0);
   return (<div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
+     <Head>
+        <title>Prateek Chachra | About</title>
+        <meta property="og:title" content="Prateek Chachra | About" key="title" />
+      </Head>
     <Circles />
     <motion.div variants={fadeIn('right', 0.2)}
     initial='hidden'
@@ -130,6 +186,7 @@ const About = () => {
             </div>
           </motion.div>
       </div>
+      
       <motion.div
        variants={fadeIn('left', 0.2)}
        initial='hidden'
@@ -145,11 +202,20 @@ const About = () => {
         ))}</div>
         <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
           {aboutData[index].info.map((item, itemIndex) => (
-            <div key={itemIndex} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white'>
-              <div className='font-light mb-2 md:mb-0'>{item.title}</div>
-              <div className='hidden md:flex'>-</div>
-              <div className='hidden md:flex'>{item.stage}</div>
-              {item.icons?.map((icon, ind) => <div key={ind} className='text-2xl transition-all duration-500'>{icon}</div>)}
+            <div key={itemIndex} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center justify-between text-white'>
+              <div className='font-light mb-2 md:mb-0 max-w-[260px]'>{item.title}</div>
+              <div className='hidden md:flex ml-4'> {item.stage}</div>
+              {item.icons?.map((icon, ind) => <div key={ind} className='text-2xl transition-all relative group duration-500'>
+              <div className='absolute pr-14 right-0 z-50 hidden xl:group-hover:flex hover:transition-all duration-400'>
+                <div className='bg-white relative flex text-primary items-center
+                p-[6px] rounded-[3px]'>
+                  <div className='text-[12px] leading-none font-semibold capitalize'>{icon.name}</div>
+                    {/* Triangle */}
+                    <div className='border-solid border-l-white border-l-8 border-y-transparent 
+                    border-y-[6px] border-r-0 absolute -right-2'></div>
+                </div>
+                </div>
+                {icon.iconLink}</div>)}
             </div>
           ))}
         </div>

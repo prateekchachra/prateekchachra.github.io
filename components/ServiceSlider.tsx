@@ -5,8 +5,9 @@ import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
 import { FreeMode, Pagination } from 'swiper';
+import { Service } from '../utils/types';
 
-const serviceData = [
+const serviceData : Service[]= [
   {
     icon: <RxMobile />,
     title: 'Mobile App Development',
@@ -34,8 +35,7 @@ const serviceData = [
   },
 ];
 
-const ServiceSlider = () => {
-  return <Swiper breakpoints={{
+const ServiceSlider = () => (<Swiper breakpoints={{
     320: {
       slidesPerView: 1,
       spaceBetween: 15
@@ -69,7 +69,6 @@ const ServiceSlider = () => {
         </div>
       </SwiperSlide>
     ))}
-  </Swiper>;
-};
+  </Swiper>);
 
 export default ServiceSlider;

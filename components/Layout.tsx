@@ -10,13 +10,11 @@ const sora = Sora({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800']
 })
 
-const Layout = ({children}: React.PropsWithChildren) => {
-  return <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
+const Layout = ({children}: React.PropsWithChildren) => (<div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
     <TopLeftImg />
     <Nav />
     <Header />
     {children}
-  </div>;
-};
+  </div>);
 
 export default Layout;

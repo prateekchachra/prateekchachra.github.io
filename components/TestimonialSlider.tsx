@@ -33,8 +33,7 @@ const testimonialData = [
 ];
 
 
-const TestimonialSlider = () => {
-  return <Swiper 
+const TestimonialSlider = () => (<Swiper 
   navigation={true}
   pagination={{
     clickable: true
@@ -67,7 +66,6 @@ const TestimonialSlider = () => {
         </div>
       </SwiperSlide>
     ))}
-  </Swiper>;
-};
+  </Swiper>);
 
 export default TestimonialSlider;

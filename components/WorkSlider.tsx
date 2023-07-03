@@ -53,8 +53,7 @@ const workSlides = {
   ],
 };
 
-const WorkSlider = () => {
-  return <Swiper 
+const WorkSlider = () => (<Swiper 
   spaceBetween={10}
   pagination={{
     clickable: true
@@ -86,7 +85,6 @@ const WorkSlider = () => {
         </div>
       </SwiperSlide>
     ))}
-  </Swiper>;
-};
+  </Swiper>);
 
 export default WorkSlider;

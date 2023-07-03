@@ -1,7 +1,6 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaSwift, FaReacteurope, } from 'react-icons/fa';
-import { SiMysql, SiExpress, SiNextdotjs, SiFramer, SiKotlin, SiRedis, SiFirebase, SiMocha} from 'react-icons/si';
+import { SiMysql, SiExpress, SiNextdotjs, SiKotlin, SiRedis, SiFirebase, SiMocha} from 'react-icons/si';
 
-import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
 import { useState } from 'react';
 import CountUp from 'react-countup';

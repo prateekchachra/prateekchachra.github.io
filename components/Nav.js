@@ -1,12 +1,14 @@
 import { HiHome, HiUser, HiRectangleGroup, HiViewColumns, HiChatBubbleBottomCenterText, HiEnvelope } from 'react-icons/hi2';
+import { FaBlog } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const links = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
+  { name: 'blog', path: '/blog', icon: <FaBlog /> },
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
+  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
   {
     name: 'testimonials',
     path: '/testimonials',

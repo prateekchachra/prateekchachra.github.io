@@ -18,7 +18,7 @@ const Home = () => {
           className='h1'
         >Transforming Ideas <br /> Into <span className='text-accent'>Digital Reality</span></motion.h1>
         <motion.p variants={fadeIn('down', 0.3)} initial='hidden' 
-        animate='show' exit='hidden' className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>Hello there I am Prateek and this is my introduction
+        animate='show' exit='hidden' className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>Hi, I'm Prateek Chachra. A Full Stack Developer, who sometimes dabbles in Mobile Development from time to time and an Entrepreneurship Enthusiast🚀 from Madrid, Spain.
         </motion.p>
         <div className='flex justify-center xl:hidden relative'>
           <ProjectsBtn/>

@@ -138,13 +138,6 @@ const About = () => {
         <meta property="og:title" content="Prateek Chachra | About" key="title" />
       </Head>
     <Circles />
-    <motion.div variants={fadeIn('right', 0.2)}
-    initial='hidden'
-    animate='show'
-    exit='hidden'
-    className='hidden xl:flex absolute bottom-0 -left-[350px] opacity-20'>
-      <Avatar />
-    </motion.div>
     <div className='container mx-auto h-full flex flex-col items-center xl:flex-row
     gap-x-6'>
       <div className='flex-1 flex flex-col justify-center'>

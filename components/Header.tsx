@@ -9,7 +9,7 @@ const Header = () => (
       <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
         <Link href={"/"}>
           <span className="tracking-widest text-2xl">
-            <span className="font-semibold">Prateek</span> Chachra
+            <span className="font-semibold text-accent">Prateek</span> Chachra
           </span>
         </Link>
         <Socials />

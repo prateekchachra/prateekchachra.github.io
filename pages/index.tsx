@@ -1,20 +1,30 @@
-import Image from "next/image";
-import PraticleContainer from "../components/ParticlesContainer";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import ParticlesContainer from "../components/ParticlesContainer";
 import Head from "next/head";
+import { useTranslation } from 'next-i18next';
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common']))
+    },
+  }
+}
 
 const Home = () => {
+  const { t } = useTranslation('common');
+
   return (
     <div className="bg-primary/60 h-full ">
       <Head>
-        <title>Prateek Chachra | Portfolio</title>
+        <title>Prateek Chachra | {t('portfolio')}</title>
         <meta
           property="og:title"
-          content="Prateek Chachra | Portfolio"
+          content={`Prateek Chachra | ${t('portfolio')}`}
           key="title"
         />
       </Head>
@@ -27,8 +37,8 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            {t('header.1')} <br /> {t('header.2')}{" "}
+            <span className="text-accent">{t('header.3')}</span>
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
@@ -37,9 +47,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Hi, I'm Prateek Chachra. A Full Stack Developer, who sometimes
-            dabbles in Mobile Development from time to time and an
-            Entrepreneurship Enthusiast🚀 from Madrid, Spain.
+            {t('description')}
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />

@@ -5,46 +5,47 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import Image from "next/image";
+import Link from "next/link";
 
 const workSlides = {
   slides: [
-    {
+    {link: 'https://freemyroom.vercel.app/',
       images: [
         {
-          title: "title",
-          path: "/thumb1.jpg",
+          title: "Free My Room",
+          path: "/freemyroom4.png",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          title: "Free My Room",
+          path: "/freemyroom2.png",
         },
         {
-          title: "title",
-          path: "/thumb3.jpg",
+          title: "Free My Room",
+          path: "/freemyroom3.png",
         },
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "Free My Room",
+          path: "/freemyroom1.png",
         },
       ],
     },
-    {
+    { link: 'https://sumanchachra.vercel.app/',
       images: [
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "Graphic Designer Portfolio",
+          path: "/suman4.png",
         },
         {
-          title: "title",
-          path: "/thumb1.jpg",
+          title: "Graphic Designer Portfolio",
+          path: "/suman1.png",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          title: "Graphic Designer Portfolio",
+          path: "/suman2.png",
         },
         {
-          title: "title",
-          path: "/thumb3.jpg",
+          title: "Graphic Designer Portfolio",
+          path: "/suman3.png",
         },
       ],
     },
@@ -64,7 +65,7 @@ const WorkSlider = () => (
       <SwiperSlide key={index}>
         <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer max-h-[100%]">
           {slide.images.map((image, ind) => (
-            <div
+            <Link href={slide.link} target="_blank"
               key={ind}
               className="relative rounded-lg overflow-hidden flex items-center justify-center group "
             >
@@ -84,7 +85,7 @@ const WorkSlider = () => (
                transition-all duration-300"
                 >
                   <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                    <div className="delay-100">LIVE</div>
+                    <div className="delay-100">GO TO</div>
                     <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
                       PROJECT
                     </div>
@@ -94,7 +95,7 @@ const WorkSlider = () => (
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </SwiperSlide>

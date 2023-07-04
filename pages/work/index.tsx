@@ -38,7 +38,7 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              All my past projects.
+              I showcase two of my best projects here. One is a Startup Website and another is a Graphic Designer's Portfolio. Click to see!
             </motion.p>
           </div>
           <motion.div

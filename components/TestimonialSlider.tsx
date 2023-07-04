@@ -11,24 +11,24 @@ import Image from "next/image";
 const testimonialData = [
   {
     image: "/t-avt-1.png",
-    name: "Anne Smith",
-    position: "Customer",
+    name: "Agustin Berisso",
+    position: "Manager | Taxfix",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Prateek always brings in new, amazing ideas! He worked with me in Taxfix in the Clippys team and was one of the most energetic members of the team!",
   },
   {
     image: "/t-avt-2.png",
-    name: "Jane Doe",
-    position: "Customer",
+    name: "Abhilash Sakunthala",
+    position: "Co-Worker | Taxfix",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Prateek is a gem to work with! He is quite skilled and there's always something you can learn from talking to him",
   },
   {
     image: "/t-avt-3.png",
-    name: "Jhon Doe",
-    position: "Customer",
+    name: "Dhananjay Jha",
+    position: "Manager | Nucleus Software",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Prateek's grasping power is quite good, he's able to understand the tasks and come up with good solutions for various issues fairly quickly!",
   },
 ];
 

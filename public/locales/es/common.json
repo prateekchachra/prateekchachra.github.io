@@ -5,5 +5,15 @@
         "2": "En",
         "3": "Realidad Digital"
     },
-    "description": "Hola, soy Prateek Chachra. Un Desarrollador Full Stack, que a veces incursiona en el Desarrollo Móvil de vez en cuando y un Entusiasta del Emprendimiento 🚀 desde Madrid, España"
+    "description": "Hola, soy Prateek Chachra. Un Desarrollador Full Stack, que a veces incursiona en el Desarrollo Móvil de vez en cuando y un Entusiasta del Emprendimiento 🚀 desde Madrid, España",
+    "about": {
+        "header": {
+            "1" :"Historias ",
+            "2" :"cautivadoras ",
+            "3" :"paren a magníficos diseños"
+        },
+        "years": "Años de Experiencia",
+        "projects": "Proyectos",
+        "description" : "Hace 6 años comencé mi carrera como Desarrollador con Java. Yo vi a mi mismo gravitando hacia ReactJS/Next.JS porque me ayudó lanzar mis propias ideas emprendedoras. Desde entonces, he hecho varios proyectos con esta maravillosa Biblioteca JS FE."
+    }
 }

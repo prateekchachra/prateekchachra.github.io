@@ -10,25 +10,25 @@ import Image from "next/image";
 // testimonial data
 const testimonialData = [
   {
-    image: "/t-avt-1.png",
-    name: "Agustin Berisso",
-    position: "Manager | Taxfix",
-    message:
-      "Prateek always brings in new, amazing ideas! He worked with me in Taxfix in the Clippys team and was one of the most energetic members of the team!",
-  },
-  {
-    image: "/t-avt-2.png",
-    name: "Abhilash Sakunthala",
-    position: "Co-Worker | Taxfix",
-    message:
-      "Prateek is a gem to work with! He is quite skilled and there's always something you can learn from talking to him",
-  },
-  {
-    image: "/t-avt-3.png",
+    image: "/dhananjay.jpeg",
     name: "Dhananjay Jha",
     position: "Manager | Nucleus Software",
     message:
       "Prateek's grasping power is quite good, he's able to understand the tasks and come up with good solutions for various issues fairly quickly!",
+  },
+  {
+    image: "/abhilash.jpeg",
+    name: "Abhilash Sakunthala",
+    position: "Co-Worker | Taxfix",
+    message:
+    "Prateek is a gem to work with! He is quite skilled and there's always something you can learn from talking to him",
+  },
+  {
+    image: "/agustin.jpeg",
+    name: "Agustin Berisso",
+    position: "Manager | Taxfix",
+    message:
+      "Prateek always brings in new, amazing ideas! He worked with me in Taxfix in the Clippys team and was one of the most energetic members of the team!",
   },
 ];
 
@@ -53,7 +53,7 @@ const TestimonialSlider = () => (
           >
             <div className="flex flex-col justify-center text-center">
               <div className="mb-2 mx-auto">
-                <Image src={person.image} width={100} height={100} alt="" />
+                <Image src={person.image} width={100} height={100} className="rounded-full" alt="" />
               </div>
               <div className="text-lg">{person.name}</div>
               <div className="text-[12px] uppercase font-extralight tracking-widest">

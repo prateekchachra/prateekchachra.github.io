@@ -22,7 +22,7 @@ const Testimonials = () => {
           exit="hidden"
           className="h2 mb-8 xl:mb-0"
         >
-          What Clients <span className="text-accent">Say.</span>
+          What Coworkers <span className="text-accent">Say.</span>
         </motion.h2>
         <motion.div
           variants={fadeIn("up", 0.8)}

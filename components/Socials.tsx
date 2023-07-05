@@ -1,12 +1,18 @@
 import Link from "next/link";
+import { useRouter } from 'next/router'
 import {
   RiYoutubeLine,
   RiInstagramLine,
   RiLinkedinLine,
   RiGithubLine,
+
 } from "react-icons/ri";
 
-const Socials = () => (
+const Socials = () => {
+  
+  const router = useRouter();
+  const {locale} = router;
+  return (
   <div className="flex items-center gap-x-5 text-lg">
     <Link
       target="_blank"
@@ -36,6 +42,12 @@ const Socials = () => (
     >
       <RiGithubLine />
     </Link>
+    <Link
+      href={locale === 'es' ? '/en' : '/es'}
+      className="hover:text-accent transition-all duration-300"
+    >
+      {locale === 'es' ? '🇬🇧EN' : '🇪🇸ES'}
+    </Link>
   </div>
-);
+);}
 export default Socials;

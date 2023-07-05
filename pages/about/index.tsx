@@ -17,10 +17,15 @@ import {
   SiMocha,
 } from "react-icons/si";
 
-import Circles from "../../components/Circles";
 import { useState } from "react";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
+import Head from "next/head";
+import { useTranslation } from "react-i18next";
 
+import Circles from "../../components/Circles";
+import { fadeIn } from "../../variants";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 const aboutData = [
   {
     title: "skills",
@@ -138,14 +143,19 @@ const aboutData = [
   },
 ];
 
-// Framer motion
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
-import Head from "next/head";
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common']))
+    },
+  }
+}
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const {t} = useTranslation('common');
+
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Head>
@@ -169,8 +179,7 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs
+            {t('about.header.1')} <span className="text-accent">{t('about.header.2')} </span> {t('about.header.3')}
           </motion.h2>
           <motion.p
             variants={fadeIn("down", 1)}
@@ -179,10 +188,7 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 "
           >
-            6 years ago, I began my journey as a Developer with Java. I saw
-            myself gravitating towards ReactJS/Next.JS because it helped me
-            launch my own entrepreneurial ideas. Since then, I've done various
-            projects with this marvellous JS FE Library.
+            {t('about.description')}
           </motion.p>
           <motion.div
             variants={fadeIn("down", 1.2)}
@@ -199,7 +205,7 @@ const About = () => {
                   <CountUp start={0} end={6} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of Experience
+                  {t('about.years')}
                 </div>
               </div>
               <div
@@ -210,7 +216,7 @@ const About = () => {
                   <CountUp start={0} end={24} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Projects
+                  {t('about.projects')}
                 </div>
               </div>
             </div>
